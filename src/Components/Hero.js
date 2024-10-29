@@ -72,7 +72,7 @@ export default function Hero() {
         >
           <ChevronDown className="w-8 h-8 animate-bounce" />
         </button>
-        <motion.div className="w-full flex justify-center mt-40">
+        <motion.div className="w-full flex justify-center mt-">
           <Lottie options={defaultOptions} height={500} width={500} />
         </motion.div>
       </div>
