@@ -10,7 +10,7 @@ const education = [
   },
   {
     degree: "Secondary Education",
-    period: "2022-2-26",
+    period: "2020-2022",
     institution: "  Dharampeth M.P. Deo Memorial Science College, Nagpur",
     achievements: ["Participated in SOF International Mathematics 2022 Olympiad and got School Rank-1", "Participated in SOF International Science Olympiad 2022 and got School Rank-1", "Participated in SOF International English Olympiad 2022 and got School Rank-5"]
   }
