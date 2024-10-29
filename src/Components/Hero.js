@@ -41,7 +41,7 @@ export default function Hero() {
         {/* Mobile-friendly scroll indicator */}
         <button 
           onClick={scrollToSkills}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-purple-400 hover:text-purple-300 transition-colors touch-highlight"
+          className="absolute bottom left-1/2 -translate-x-1/2 text-purple-400 hover:text-purple-300 transition-colors touch-highlight"
           aria-label="Scroll to skills"
         >
           <ChevronDown className="w-8 h-8 animate-bounce" />
