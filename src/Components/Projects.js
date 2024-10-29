@@ -61,7 +61,7 @@ export default function Projects() {
               />
               <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end transform transition-transform duration-300">
                 <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-300 mb-4">{project.tech}</p>
+                <p className="text-purple-400 mb-4">{project.tech}</p>
                 <div className="flex space-x-4 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                   <button
                     onClick={() => setActiveModal(index)}
