@@ -74,7 +74,7 @@ export default function Contact() {
             </button>
           </div>
         </div>
-        <p className="text-sm text-gray-500 mt-3">
+        <p className="text-sm text-gray-500 mt-6">
           © {new Date().getFullYear()} Rohit Manohar. All rights reserved.
         </p>
       </div>
