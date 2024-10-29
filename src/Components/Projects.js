@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: "Operating System Simulator",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIaYf8IsbR8uD-69yYhlNmLHl4FeENpJhHlA&s",
+    image: "https://cdn.prod.website-files.com/65cfe20094561f14a48e5d22/65cfe20194561f14a48e8bca_lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg",
     tech: "HTML • CSS • NodeJS • JQuery ",
     description: "Developed a web app to simulate and visualize FIFO, LRU, and Optimal page replacement algorithms, enhancing understanding of memory management and system performance optimization.",
     challenges: "Real-time monitoring of thousands of instances",
