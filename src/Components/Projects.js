@@ -24,7 +24,7 @@ export default function Projects() {
   const [activeModal, setActiveModal] = useState(null);
 
   return (
-    <div className="py-20 bg-black/30">
+    <div id="projects" className="py-20 bg-black/30">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
           Featured Projects

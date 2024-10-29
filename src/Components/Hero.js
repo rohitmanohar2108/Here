@@ -1,15 +1,23 @@
-import React from 'react';
-import { Terminal, ChevronDown } from 'lucide-react';
+import React from "react";
+import { Terminal, ChevronDown } from "lucide-react";
 
 export default function Hero() {
   const scrollToSkills = () => {
-    document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToProjects = () => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="min-h-screen relative overflow-hidden flex items-center justify-center bg-grid-pattern">
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-purple-900/30 to-black/80 backdrop-blur-sm" />
-      
+
       {/* Mobile-optimized content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <div className="mb-8">
@@ -27,10 +35,16 @@ export default function Hero() {
                 Computer Science @ NITK
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <button className="px-6 py-2 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 hover:bg-purple-500/30 transition-colors touch-highlight">
+                <button
+                  onClick={scrollToProjects}
+                  className="px-6 py-2 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 hover:bg-purple-500/30 transition-colors touch-highlight"
+                >
                   View Projects
                 </button>
-                <button className="px-6 py-2 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 hover:bg-pink-500/30 transition-colors touch-highlight">
+                <button
+                  onClick={scrollToContact}
+                  className="px-6 py-2 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 hover:bg-pink-500/30 transition-colors touch-highlight"
+                >
                   Contact Me
                 </button>
               </div>
@@ -39,7 +53,7 @@ export default function Hero() {
         </div>
 
         {/* Mobile-friendly scroll indicator */}
-        <button 
+        <button
           onClick={scrollToSkills}
           className="absolute bottom left-1/2 -translate-x-1/2 text-purple-400 hover:text-purple-300 transition-colors touch-highlight"
           aria-label="Scroll to skills"
