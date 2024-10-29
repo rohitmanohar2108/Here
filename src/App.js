@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react';
+import Hero from './Components/Hero';
+
+// Lazy load components for better mobile performance
+const Skills = React.lazy(() => import('./Components/Skills'));
+const Projects = React.lazy(() => import('./Components/Projects'));
+const Experience = React.lazy(() => import('./Components/Experience'));
+const Contact = React.lazy(() => import('./Components/Contact.js'));
+
+// Loading component
+const LoadingSection = () => (
+  <div className="py-20 px-4">
+    <div className="w-full h-64 bg-purple-900/10 rounded-xl loading-shimmer"></div>
+  </div>
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-black text-white">
+      <Hero />
+      <Suspense fallback={<LoadingSection />}>
+        <Skills />
+        <Projects />
+        <Experience />
+        <Contact />
+      </Suspense>
     </div>
   );
 }
