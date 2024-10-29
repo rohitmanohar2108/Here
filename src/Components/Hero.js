@@ -26,13 +26,13 @@ export default function Hero() {
             <div className="relative mobile-glass rounded-lg p-6 sm:p-8">
               <Terminal className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-6 text-purple-400" />
               <div className="inline-flex mb-4 px-4 py-1 bg-purple-500/20 rounded-full text-purple-300 text-sm touch-highlight">
-                Hello World, I'm
+              Hello World, I'm
               </div>
               <h1 className="text-4xl sm:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
                 Rohit Manohar
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 mb-6">
-                Computer Science @ NITK
+              Computer Science undergrad @ NITK
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <button

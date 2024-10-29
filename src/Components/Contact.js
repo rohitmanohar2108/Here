@@ -5,13 +5,13 @@ const socials = [
   {
     icon: <Github className="w-6 h-6" />,
     label: "GitHub",
-    href: "https://github.com/yourusername",
+    href: "https://github.com/rohitmanohar2108",
     color: "hover:text-purple-400"
   },
   {
     icon: <Linkedin className="w-6 h-6" />,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/rohit-manohar-80b949207/",
     color: "hover:text-blue-400"
   },
   {
@@ -43,7 +43,7 @@ export default function Contact() {
                 <div className="mb-4 transform transition-transform group-hover:scale-110">
                   {social.icon}
                 </div>
-                <span className="text-sm font-medium flex items-center gap-1">
+                <span className="text-sm font-medium ml-4 flex items-center gap-1">
                   {social.label}
                   <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </span>
@@ -56,7 +56,7 @@ export default function Contact() {
               Looking for opportunities to create impactful solutions and contribute to innovative projects.
             </p>
             <button className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium hover:from-purple-600 hover:to-pink-600 transition-colors">
-              Download Resume
+              View Resume
             </button>
           </div>
         </div>

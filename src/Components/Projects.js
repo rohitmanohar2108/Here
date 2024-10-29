@@ -3,20 +3,38 @@ import { ExternalLink, Github, X } from 'lucide-react';
 
 const projects = [
   {
-    title: "AI Code Assistant",
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
-    tech: "React • TensorFlow.js • WebGL",
-    description: "Real-time code analysis and suggestions powered by AI",
-    challenges: "Implementing efficient ML models in browser",
-    achievements: "100k+ active users, Featured in Dev Community"
+    title: "FilmNinja",
+    image: "https://do6gp1uxl3luu.cloudfront.net/projects/netflixProject.png",
+    tech: "React • Javascript • TailwindCSS • OpenAI Gpt Api • TMDB Api • React Redux ",
+    description: "Built a responsive movie browsing app with real-time data and smart suggestions, featuring optimized search and secure user authentication.",
+    challenges: "Fetching various api's both OpenAi ans TMDB and also managing states in Redux Store",
+    achievements: "100k+ active users, Featured in Dev Community",
+    githubLink: "https://github.com/rohitmanohar2108/FilmNinja"
   },
   {
-    title: "Cloud Fleet Manager",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
-    tech: "Next.js • AWS • GraphQL",
-    description: "Enterprise cloud resource management dashboard",
+    title: "Operating System Simulator",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIaYf8IsbR8uD-69yYhlNmLHl4FeENpJhHlA&s",
+    tech: "HTML • CSS • NodeJS • JQuery ",
+    description: "Developed a web app to simulate and visualize FIFO, LRU, and Optimal page replacement algorithms, enhancing understanding of memory management and system performance optimization.",
     challenges: "Real-time monitoring of thousands of instances",
-    achievements: "Reduced cloud costs by 45% for clients"
+    achievements: "Reduced algo costs by 45% for clients",
+    githubLink: "https://github.com/rohitmanohar2108/OS-LAB-PROJECT"
+  },
+  {
+    title: "Airlines Reservation System",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4niMvPT8O32HP7DBPtM1SFndUKi3ZZumyKA&s",
+    tech: "React • JavaScript • MySql ",
+    description: "Effective airline management relies on online booking systems to enhance customer experience, streamline operations, and boost profitability. These systems improve reservations, reduce errors, and provide valuable data for tailored services and marketing.",
+    challenges: "Real-time monitoring of Flights and Tickets",
+    achievements: "Reduced variation of data",
+    githubLink: "https://github.com/user/project-three"
+  },
+  {
+    title: "PortfolioWeb",
+    image: "https://parthmittal.netlify.app/assets/portfolio.a3d12760.jpg",
+    tech: "React• Javascript • TailwindCSS  ",
+    description: "Created an interactive portfolio website that highlights skills and projects with modern design and animations. Included a contact form and social media links to facilitate user engagement and connections.",
+    githubLink: "https://github.com/rohitmanohar2108/Portfolioweb"
   }
 ];
 
@@ -51,7 +69,12 @@ export default function Projects() {
                   >
                     <ExternalLink className="w-5 h-5 mr-2" /> View Details
                   </button>
-                  <a href="#" className="flex items-center text-purple-400 hover:text-purple-300">
+                  <a 
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer" 
+                    className="flex items-center text-purple-400 hover:text-purple-300"
+                  >
                     <Github className="w-5 h-5 mr-2" /> View Code
                   </a>
                 </div>

@@ -1,8 +1,10 @@
 import React, { Suspense } from 'react';
 import Hero from './Components/Hero';
 
+
 // Lazy load components for better mobile performance
 const Skills = React.lazy(() => import('./Components/Skills'));
+const Education = React.lazy(() => import('./Components/Education.js'));
 const Projects = React.lazy(() => import('./Components/Projects'));
 const Experience = React.lazy(() => import('./Components/Experience'));
 const Contact = React.lazy(() => import('./Components/Contact.js'));
@@ -20,8 +22,9 @@ function App() {
       <Hero />
       <Suspense fallback={<LoadingSection />}>
         <Skills />
-        <Projects />
+        <Education />
         <Experience />
+        <Projects /> 
         <Contact />
       </Suspense>
     </div>
