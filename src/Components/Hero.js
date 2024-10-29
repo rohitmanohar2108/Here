@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-purple-900/30 to-black/80 backdrop-blur-sm" />
 
       {/* Mobile-optimized content */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center mt-44">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <div className="mb-8">
           <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-glow"></div>
@@ -72,7 +72,7 @@ export default function Hero() {
         >
           <ChevronDown className="w-8 h-8 animate-bounce" />
         </button>
-        <motion.div className="w-full flex justify-center">
+        <motion.div className="w-full flex justify-center mt-40">
           <Lottie options={defaultOptions} height={500} width={500} />
         </motion.div>
       </div>
