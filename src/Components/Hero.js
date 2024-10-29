@@ -46,7 +46,7 @@ export default function Hero() {
               <p className="text-lg sm:text-xl text-gray-300 mb-6">
                 Computer Science undergrad @ NITK
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex  justify-center gap-4">
                 <button
                   onClick={scrollToProjects}
                   className="px-6 py-2 rounded-full bg-purple-500/20 text-pink-300 border border-purple-500/30 hover:bg-purple-500/30 transition-colors touch-highlight"
