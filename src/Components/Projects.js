@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: "Operating System Simulator",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIaYf8IsbR8uD-69yYhlNmLHl4FeENpJhHlA&s",
+    image: "./operatingsystem.jpg",
     tech: "HTML • CSS • NodeJS • JQuery ",
     description: "Developed a web app to simulate and visualize FIFO, LRU, and Optimal page replacement algorithms, enhancing understanding of memory management and system performance optimization.",
     challenges: "Real-time monitoring of thousands of instances",
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: "Airlines Reservation System",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4niMvPT8O32HP7DBPtM1SFndUKi3ZZumyKA&s",
+    image: "./Airline.jpg",
     tech: "React • JavaScript • MySql ",
     description: "Effective airline management relies on online booking systems to enhance customer experience, streamline operations, and boost profitability. These systems improve reservations, reduce errors, and provide valuable data for tailored services and marketing.",
     challenges: "Real-time monitoring of Flights and Tickets",
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     title: "PortfolioWeb",
-    image: "https://parthmittal.netlify.app/assets/portfolio.a3d12760.jpg",
+    image: "./portfolio.jpg",
     tech: "React• Javascript • TailwindCSS  ",
     description: "Created an interactive portfolio website that highlights skills and projects with modern design and animations. Included a contact form and social media links to facilitate user engagement and connections.",
     githubLink: "https://github.com/rohitmanohar2108/Portfolioweb"
@@ -61,7 +61,7 @@ export default function Projects() {
               />
               <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end transform transition-transform duration-300">
                 <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                <p className="text-purple-400 mb-4">{project.tech}</p>
+                <p className="text-white mb-4">{project.tech}</p>
                 <div className="flex space-x-4 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                   <button
                     onClick={() => setActiveModal(index)}

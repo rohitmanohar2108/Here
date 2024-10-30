@@ -39,7 +39,7 @@ export default function Contact() {
             <img
               src="/rohit.jpg" // Directly referencing the image in the public folder
               alt="Rohit Manohar"
-              className="w-36 h-36 rounded-full border-4 border-purple-400"
+              className="w-36 h-36 rounded-full border-4 border-white"
             />
           </div>
           
