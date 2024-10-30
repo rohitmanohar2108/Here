@@ -27,7 +27,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden flex items-center justify-center bg-grid-pattern">
+    <div className="min-h-screen relative overflow-hidden flex items-center justify-center bg-grid-pattern ">
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-purple-900/30 to-black/80 backdrop-blur-sm" />
 
       {/* Mobile-optimized content */}

@@ -10,6 +10,7 @@ const experiences = [
                 
     achievements: ["Collaborated on media campaigns to boost event visibility and engagement.", "Various Theme revels", "100% positive feedback"]
   },
+  
  
 ];
 
