@@ -3,37 +3,37 @@ import { Brain, Flame, Database, Code2, Globe, Cpu } from 'lucide-react';
 
 const skills = [
   {
-    icon: <Code2 className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <Code2 className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500 " />,
     title: "Frontend",
     desc: "React • Next.js • GSAP",
     color: "from-blue-500 to-cyan-500"
   },
   {
-    icon: <Database className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <Database className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />,
     title: "Backend",
     desc: "Node.js • Firebase • MongoDB",
     color: "from-green-500 to-emerald-500"
   },
   {
-    icon: <Brain className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <Brain className="w-6 h-6 sm:w-8 sm:h-8 text-purple-500 " />,
     title: "AI/ML",
     desc: "TensorFlow • PyTorch",
     color: "from-purple-500 to-pink-500"
   },
   {
-    icon: <Globe className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500" />,
     title: "Cloud",
     desc: "AWS • Docker",
     color: "from-orange-500 to-red-500"
   },
   {
-    icon: <Cpu className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <Cpu className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-500" />,
     title: "Systems",
     desc: "Architecture • Performance",
     color: "from-yellow-500 to-orange-500"
   },
   {
-    icon: <Flame className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <Flame className="w-6 h-6 sm:w-8 sm:h-8 text-indigo-500" />,
     title: "DevOps",
     desc: "CI/CD • Testing",
     color: "from-indigo-500 to-purple-500"
