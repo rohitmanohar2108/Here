@@ -23,7 +23,7 @@ const skills = [
   {
     icon: <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500" />,
     title: "Cloud",
-    desc: "AWS • Docker",
+    desc: "AWS • Docker • Microsoft Azure",
     color: "from-orange-500 to-red-500"
   },
   {
@@ -53,7 +53,7 @@ export default function Skills() {
               key={index}
               className="group relative touch-highlight"
             >
-              <div className="absolute -inset-0.5 bg-gradient-to-r opacity-75 blur-sm transition duration-300 group-hover:opacity-100 rounded-xl bg-pink-500/60 hover:bg-pink-500/90"
+              <div className="absolute -inset-0.5 bg-gradient-to-r opacity- blur-sm transition duration-300 group-hover:opacity-100 rounded-xl bg-pink-500/60 hover:bg-pink-500"
                 style={{
                   backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))`,
                   '--tw-gradient-from': skill.color.split(' ')[0].split('-')[1],
