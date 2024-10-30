@@ -5,7 +5,7 @@ const skills = [
   {
     icon: <Code2 className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500 " />,
     title: "Frontend",
-    desc: "React • Next.js • GSAP",
+    desc: "React • Next.js • GSAP • Angular",
     color: "from-blue-500 to-cyan-500"
   },
   {
@@ -35,7 +35,7 @@ const skills = [
   {
     icon: <Flame className="w-6 h-6 sm:w-8 sm:h-8 text-indigo-500" />,
     title: "DevOps",
-    desc: "CI/CD • Testing",
+    desc: "CI/CD • Testing • Docker • Github ",
     color: "from-indigo-500 to-purple-500"
   }
 ];
@@ -53,7 +53,7 @@ export default function Skills() {
               key={index}
               className="group relative touch-highlight"
             >
-              <div className="absolute -inset-0.5 bg-gradient-to-r opacity-75 blur-sm transition duration-300 group-hover:opacity-100 rounded-xl"
+              <div className="absolute -inset-0.5 bg-gradient-to-r opacity-75 blur-sm transition duration-300 group-hover:opacity-100 rounded-xl bg-pink-500/60 hover:bg-pink-500/90"
                 style={{
                   backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))`,
                   '--tw-gradient-from': skill.color.split(' ')[0].split('-')[1],
