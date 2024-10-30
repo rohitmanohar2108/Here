@@ -1,5 +1,8 @@
 import React from 'react';
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import Lottie from "react-lottie"; // Make sure you have imported the Lottie component
+import { motion } from "framer-motion"; 
+import animationDataTwo from "../Animations/animationtwo.json";
 
 const socials = [
   {
@@ -22,10 +25,22 @@ const socials = [
   }
 ];
 
+const defaultOptionsTwo = {
+  loop: true,
+  autoplay: true,
+  animationData: animationDataTwo,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+
 export default function Contact() {
   return (
     <div id="contact" className="py-20 relative">
       <div className="max-w-4xl mx-auto px-6 text-center">
+      <motion.div className="w-full flex justify-center">
+          <Lottie options={defaultOptionsTwo} height={300} width={300} />
+        </motion.div>
         
         <h2 className="text-4xl font-bold mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
           Let's Connect
