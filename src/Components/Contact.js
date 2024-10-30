@@ -39,24 +39,24 @@ export default function Contact() {
             <img
               src="/rohit.jpg" // Directly referencing the image in the public folder
               alt="Rohit Manohar"
-              className="w-36 h-36 rounded-full border-4 border-white"
+              className="w-52 h-52 rounded-full border-4 border-white"
             />
           </div>
           
           {/* Social Links with Icons Above Text */}
-          <div className="flex justify-center space-x- mb-8">
+          <div className="flex justify-center space-x-3 mb-8">
             {socials.map((social, index) => (
               <a
                 key={index}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group flex flex-col items-center p-4 rounded-lg transition-colors ${social.color} hover:bg-white/5`}
+                className={`group flex flex-col items-center px-5 py- rounded-lg transition-colors ${social.color} bg-pink-500/20 border border-pink-500/30 hover:bg-white/5`}
               >
-                <div className="mb-2 transform transition-transform group-hover:scale-110">
+                <div className="mb-1 mt-3 transform transition-transform group-hover:scale-110">
                   {social.icon}
                 </div>
-                <span className="text-sm font-medium flex items-center gap-2 ml-2">
+                <span className="text-sm font-medium  items-center gap-2 ">
                   {social.label}
                   <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </span>
