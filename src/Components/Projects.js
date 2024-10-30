@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, X } from 'lucide-react';
+import { ExternalLink, Github, X, Link } from 'lucide-react';
 
 const projects = [
   {
@@ -9,7 +9,8 @@ const projects = [
     description: "Built a responsive movie browsing app with real-time data and smart suggestions, featuring optimized search and secure user authentication.",
     challenges: "Fetching various api's both OpenAi ans TMDB and also managing states in Redux Store",
     achievements: "100k+ active users, Featured in Dev Community",
-    githubLink: "https://github.com/rohitmanohar2108/FilmNinja"
+    githubLink: "https://github.com/rohitmanohar2108/FilmNinja",
+    
   },
   {
     title: "Operating System Simulator",
@@ -34,7 +35,8 @@ const projects = [
     image: "./Portfolio.jpg",
     tech: "React• Javascript • TailwindCSS  ",
     description: "Created an interactive portfolio website that highlights skills and projects with modern design and animations. Included a contact form and social media links to facilitate user engagement and connections.",
-    githubLink: "https://github.com/rohitmanohar2108/Portfolioweb"
+    githubLink: "https://github.com/rohitmanohar2108/Portfolioweb",
+    liveLink:"https://here-one.vercel.app/"
   }
 ];
 
@@ -76,6 +78,14 @@ export default function Projects() {
                     className="flex items-center text-purple-400 hover:text-purple-300"
                   >
                     <Github className="w-5 h-5 mr-2" /> View Code
+                  </a>
+                  <a 
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer" 
+                    className="flex items-center text-purple-400 hover:text-purple-300"
+                  >
+                    <Link className="w-5 h-5 mr-2" /> Link
                   </a>
                 </div>
               </div>

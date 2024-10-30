@@ -17,7 +17,7 @@ const skills = [
   {
     icon: <Brain className="w-6 h-6 sm:w-8 sm:h-8 text-purple-500 " />,
     title: "AI/ML",
-    desc: "TensorFlow • PyTorch",
+    desc: "TensorFlow • PyTorch • Deep Learning",
     color: "from-purple-500 to-pink-500"
   },
   {
