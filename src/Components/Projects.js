@@ -31,7 +31,7 @@ const projects = [
   },
   {
     title: "PortfolioWeb",
-    image: "./portfolio.jpg",
+    image: "./Portfolio.jpg",
     tech: "React• Javascript • TailwindCSS  ",
     description: "Created an interactive portfolio website that highlights skills and projects with modern design and animations. Included a contact form and social media links to facilitate user engagement and connections.",
     githubLink: "https://github.com/rohitmanohar2108/Portfolioweb"
