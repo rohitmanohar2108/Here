@@ -4,7 +4,7 @@ import { Code2, Rocket, Sparkles, Terminal } from 'lucide-react';
 
 export default function Welcome() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-slate-800 to-black flex items-center justify-center p-4  overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-purple-700/70 via-black to-rose-700/50 flex items-center justify-center p-4  overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 cyber-grid opacity-20" />
       
@@ -66,7 +66,7 @@ export default function Welcome() {
                 Hello World
               </span>
             </h1>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold px-6 py-2 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 hover:bg-pink-500/30 transition-colors touch-highlight">
               Welcome to my portfolio
             </h2>
           </motion.div>
