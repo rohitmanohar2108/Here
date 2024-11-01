@@ -1,5 +1,5 @@
 import React from "react";
-import { Terminal, ChevronDown } from "lucide-react";
+import { Terminal, ChevronDown, Sparkles } from "lucide-react";
 import Lottie from "react-lottie"; // Make sure you have imported the Lottie component
 import { motion } from "framer-motion"; // For motion animation
 import animationData from "../Animations/animation.json";
@@ -75,6 +75,29 @@ export default function Hero() {
         <motion.div className="w-full flex justify-center mt-">
           <Lottie options={defaultOptions} height={500} width={500} />
         </motion.div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
+            className="flex justify-center gap-4"
+          >
+            {[...Array(3)].map((_, i) => (
+              <motion.div
+                key={i}
+                animate={{
+                  y: [0, -10, 0],
+                  opacity: [0.5, 1, 0.5],
+                }}
+                transition={{
+                  duration: 2,
+                  delay: i * 0.2,
+                  repeat: Infinity,
+                }}
+              >
+                <Sparkles className="w-5 h-5 text-pink-600" />
+              </motion.div>
+            ))}
+          </motion.div>
       </div>
 
       {/* Mobile-optimized background effects */}
