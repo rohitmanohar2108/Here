@@ -32,7 +32,7 @@ export default function Loader() {
             }}
           />
 
-          <div className="relative glass-card bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 flex flex-col items-center gap-4 mb-28">
+          <div className="relative glass-card bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 flex flex-col items-center gap-4 mb-20">
             <motion.div
               className="relative"
               animate={{ rotate: [0, 360] }}
