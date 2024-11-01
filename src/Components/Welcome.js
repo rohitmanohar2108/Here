@@ -4,7 +4,7 @@ import { Code2, Rocket, Sparkles, Terminal } from 'lucide-react';
 
 export default function Welcome() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-700/70 via-black to-rose-700/50 flex items-center justify-center p-4  overflow-hidden">
+    <div className="min-h-screen  bg-gradient-to-br from-purple-700/70 via-black to-rose-700/50 flex items-center justify-center p-4  overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 cyber-grid opacity-20" />
       

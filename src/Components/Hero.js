@@ -32,29 +32,6 @@ export default function Hero() {
 
       {/* Mobile-optimized content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center mt-36">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.8 }}
-        className="flex justify-center gap-4 mb-9"
-      >
-        {[...Array(3)].map((_, i) => (
-          <motion.div
-            className="relative"
-            animate={{ rotate: [0, 360] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-          >
-            <motion.div
-              className="absolute inset-0"
-              animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <Sparkles className="w-7 h-7 text-purple-500/50" />
-            </motion.div>
-            <Code2 className="w-7 h-7 text-pink-400" />
-          </motion.div>
-        ))}
-      </motion.div>
         <div className="mb-8">
           <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-glow"></div>
@@ -98,29 +75,7 @@ export default function Hero() {
         <motion.div className="w-full flex justify-center mt-">
           <Lottie options={defaultOptions} height={500} width={500} />
         </motion.div>
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.1, duration: 0.8 }}
-            className="flex justify-center gap-4"
-          >
-            {[...Array(5)].map((_, i) => (
-              <motion.div
-                key={i}
-                animate={{
-                  y: [0, -10, 0],
-                  opacity: [0.5, 1, 0.5],
-                }}
-                transition={{
-                  duration: 2,
-                  delay: i * 0.2,
-                  repeat: Infinity,
-                }}
-              >
-                <Sparkles className="w-5 h-5 text-pink-600" />
-              </motion.div>
-            ))}
-          </motion.div>
+       
       </div>
 
       {/* Mobile-optimized background effects */}
