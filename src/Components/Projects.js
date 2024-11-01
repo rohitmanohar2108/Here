@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, X, Link } from 'lucide-react';
+import { ExternalLink, Github, X, Link,  Handshake, Sparkles, ShipWheel, LoaderPinwheel } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -119,6 +120,30 @@ export default function Projects() {
           ))}
         </div>
       </div>
+      <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
+            className="flex justify-center gap-4 mt-9"
+          >
+            {[...Array(3)].map((_, i) => (
+             <motion.div
+             className="relative"
+             animate={{ rotate: [0, 360] }}
+             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+           >
+             <motion.div
+               className="absolute inset-0"
+               animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+             >
+               <Sparkles className="w-7 h-7  text-white/20" />
+             </motion.div>
+             <LoaderPinwheel className="w-7 h-7 text-purple-600" />
+           </motion.div>
+               
+            ))}
+          </motion.div>
     </div>
   );
 }
