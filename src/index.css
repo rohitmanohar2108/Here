@@ -100,58 +100,17 @@ html {
 }
 
 
-/* Loader container */
-.loader-container {
-  position: fixed;
-  inset: 0;
-  background: #000;
-  z-index: 50;
-}
-
-/* Loader element */
-.loader {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  position: relative;
-  background: linear-gradient(to right, #4c1d95, #6d28d9);
-  overflow: hidden;
-}
-
-/* Shimmer effect inside loader */
-.loader-shimmer {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  animation: shimmer-loader 1.5s infinite linear;
-  background-size: 200% 100%;
-}
-
-/* Keyframes for shimmer effect */
-@keyframes shimmer-loader {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
+@layer components {
+  .glass-card {
+    box-shadow: 0 0 40px -15px rgba(147, 51, 234, 0.3);
   }
 }
 
-/* Glow animation */
-@keyframes glow-effect {
+@keyframes float {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(108, 28, 148, 0.6);
+    transform: translateY(0);
   }
   50% {
-    box-shadow: 0 0 25px rgba(108, 28, 148, 1);
+    transform: translateY(-10px);
   }
-}
-
-.animate-glow {
-  animation: glow-effect 1.5s ease-in-out infinite;
 }
