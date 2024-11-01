@@ -1,5 +1,6 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import Hero from './Components/Hero';
+import Loader from './Components/Loader.js';
 
 
 // Lazy load components for better mobile performance
@@ -17,9 +18,16 @@ const LoadingSection = () => (
 );
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Simulate loading delay
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white">
-      <Hero />
+      {loading ? <Loader /> : <Hero />}
       <Suspense fallback={<LoadingSection />}>
         <Skills />
         <Education />
