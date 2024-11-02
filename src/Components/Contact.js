@@ -69,7 +69,7 @@ export default function Contact() {
                 Looking for opportunities to create impactful solutions and contribute to innovative projects.
               </p>
               <button className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium hover:from-purple-600 hover:to-pink-600 transition-colors">
-                View Resume
+                 View Resume
               </button>
             </div>
           </div>
