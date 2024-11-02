@@ -121,3 +121,45 @@ html {
 :root {
   color-scheme: dark;
 }
+
+
+
+
+
+
+
+@keyframes border-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-border-box {
+  position: relative;
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  background-size: 300% 300%;
+  animation: border-animation 12s ease infinite;
+  border-radius: 1rem;
+  padding: 3px;
+}
+
+.animated-border-box > div {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: calc(1rem - 3px);
+}
