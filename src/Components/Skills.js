@@ -53,7 +53,7 @@ export default function Skills() {
               key={index}
               className="group relative touch-highlight"
             >
-              <div className="absolute -inset-0.5 bg-gradient-to-r opacity- blur-sm transition duration-300 group-hover:opacity-100 rounded-xl bg-pink-500/60 hover:bg-pink-500"
+              <div className="absolute -inset-0.5 bg-gradient-to-r opacity- blur-sm transition duration-300 group-hover:opacity-100 rounded-xl"
                 style={{
                   backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))`,
                   '--tw-gradient-from': skill.color.split(' ')[0].split('-')[1],
