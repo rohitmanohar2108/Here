@@ -99,3 +99,34 @@ html {
   100% { background-position: 200% 0; }
 }
 
+
+
+
+
+
+
+
+
+
+@layer utilities {
+  .mobile-glass {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+  }
+
+  .touch-highlight {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .bg-grid-pattern {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+:root {
+  color-scheme: dark;
+}

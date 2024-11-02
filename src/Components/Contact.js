@@ -60,7 +60,7 @@ export default function Contact() {
                 <div className="mb-1 mt-3 transform transition-transform group-hover:scale-110">
                   {social.icon}
                 </div>
-                <span className="text-sm font-medium  items-center gap-2 ">
+                <span className="text-sm font-medium items-center gap-2 ">
                   {social.label}
                   <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </span>
