@@ -31,7 +31,7 @@ export default function Education() {
         </h2>
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute -left-3 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-pink-500" />
+          <div className="absolute -left-3 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 lg:ml-[45%] bg-gradient-to-b from-purple-500 to-pink-500" />
 
           <div className="space-y-12">
             {education &&
@@ -43,7 +43,7 @@ export default function Education() {
                   }`}
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-0 md:left-1/3 transform -translate-x-5 w-4 h-4 rounded-full bg-purple-500 border-4 border-black" />
+                  <div className="absolute left-0 md:left-1/3 transform -translate-x-5 w-4 h-4 lg:ml-[62.8%] rounded-full bg-purple-500 border-4 border-black" />
 
                   <div
                     className={`flex-1 ${
