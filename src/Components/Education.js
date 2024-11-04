@@ -30,6 +30,7 @@ export default function Education() {
   const lineRef = useRef(null);
   const dotRefs = useRef([]);
   const cardRefs = useRef([]);
+  const contentRefs = useRef([]); // Reference for all text and image elements
 
   useEffect(() => {
     // Animate the timeline line
@@ -57,9 +58,8 @@ export default function Education() {
         {
           scale: 1,
           opacity: 1,
-          duration: 0.5,
-          ease: "back.out(1.7)",
           duration: 0.8,
+          ease: "back.out(1.7)",
           scrollTrigger: {
             trigger: dot,
             start: "top center+=100",
@@ -84,6 +84,26 @@ export default function Education() {
           scrollTrigger: {
             trigger: card,
             start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+
+    // Animate text and images inside each card
+    contentRefs.current.forEach((content, index) => {
+      gsap.fromTo(
+        content,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: content,
+            start: "top 85%",
             toggleActions: "play none none reverse",
           },
         }
@@ -115,7 +135,10 @@ export default function Education() {
   return (
     <div className="py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+        <h2
+          ref={(el) => contentRefs.current.push(el)}
+          className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
+        >
           Education
         </h2>
 
@@ -130,7 +153,7 @@ export default function Education() {
             {education.map((edu, index) => (
               <div
                 key={index}
-                ref={(el) => (cardRefs.current[index] = el)} // Add reference for each card
+                ref={(el) => (cardRefs.current[index] = el)}
                 className={`relative flex flex-col md:flex-row gap-8 ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
                 }`}
@@ -146,24 +169,47 @@ export default function Education() {
                     index % 2 === 0 ? "md:pr-12" : "md:pl-12"
                   } md:pr-16 md:pl-16`}
                 >
-                  <div className="bg-black/50 p-6 rounded-xl backdrop-blur-sm border border-purple-500/20 transform transition-transform hover:-translate-y-1 hover:border-purple-500/40">
+                  <div
+                    className="bg-black/50 p-6 rounded-xl backdrop-blur-sm border border-purple-500/20 transform transition-transform hover:-translate-y-1 hover:border-purple-500/40"
+                    ref={(el) => contentRefs.current.push(el)}
+                  >
                     {/* Logo at the top of the card */}
-                    <div className="flex justify-center mb-4">
+                    <div
+                      className="flex justify-center mb-4"
+                      ref={(el) => contentRefs.current.push(el)}
+                    >
                       <img
                         src={edu.logo}
                         alt={`${edu.institution} logo`}
                         className="w-24 h-auto object-contain"
                       />
                     </div>
-                    <div className="flex items-center gap-2 text-purple-400 mb-2">
+                    <div
+                      className="flex items-center gap-2 text-purple-400 mb-2"
+                      ref={(el) => contentRefs.current.push(el)}
+                    >
                       <Calendar className="w-4 h-4" />
                       <span className="text-sm">{edu.period}</span>
                     </div>
-                    <h3 className="text-xl font-bold mb-1">{edu.degree}</h3>
-                    <p className="text-purple-300 mb-3">{edu.institution}</p>
+                    <h3
+                      className="text-xl font-bold mb-1"
+                      ref={(el) => contentRefs.current.push(el)}
+                    >
+                      {edu.degree}
+                    </h3>
+                    <p
+                      className="text-purple-300 mb-3"
+                      ref={(el) => contentRefs.current.push(el)}
+                    >
+                      {edu.institution}
+                    </p>
                     <div className="space-y-2">
                       {edu.achievements.map((achievement, i) => (
-                        <div key={i} className="flex items-center gap-2">
+                        <div
+                          key={i}
+                          className="flex items-center gap-2"
+                          ref={(el) => contentRefs.current.push(el)}
+                        >
                           <Award className="w-4 h-4 text-purple-400" />
                           <span className="text-sm text-gray-300">
                             {achievement}
