@@ -4,10 +4,8 @@ import {
   Linkedin,
   Mail,
   ExternalLink,
-  ArrowUpRight,
   Sparkles,
   Stars,
-  Star,
 } from "lucide-react";
 
 const socials = [
@@ -36,10 +34,9 @@ export default function Contact() {
     <div id="contact" className="py-20 relative">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div className="relative inline-block group mb-16">
-        <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
             Let's Connect
           </h2>
-          
 
           {/* Animated Icons */}
           <div className="absolute -inset-10 pointer-events-none">
@@ -49,7 +46,6 @@ export default function Contact() {
             <Stars className="absolute left-0 bottom-0 w-5 h-5 text-blue-300 animate-sparkle-delay ml-6" />
 
             {/* Orbital Circles */}
-           
           </div>
         </div>
 
