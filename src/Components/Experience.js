@@ -16,7 +16,7 @@ const experiences = [
       "Various theme revels",
       "100% positive feedback",
     ],
-    logo: "/TEDxNITKSurathkal(white)300ppi.png", // Path to your logo image
+    logo: "/TEDxNITKSurathkal(white)300ppi.png",
   },
   // Add more experience entries as needed
 ];
@@ -25,6 +25,8 @@ export default function Experience() {
   const lineRef = useRef(null);
   const dotRefs = useRef([]);
   const cardRefs = useRef([]);
+  const titleRef = useRef(null);
+  const logoRefs = useRef([]);
 
   useEffect(() => {
     // Animate the timeline line
@@ -83,12 +85,52 @@ export default function Experience() {
         }
       );
     });
+
+    // Animate the title
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0, scale: 0.9 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    // Animate each logo
+    logoRefs.current.forEach((logo) => {
+      gsap.fromTo(
+        logo,
+        { opacity: 0, scale: 0.8, rotation: -10 },
+        {
+          opacity: 1,
+          scale: 1,
+          rotation: 0,
+          duration: 1.2,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: logo,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
   }, []);
 
   return (
     <div className="py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+        <h2
+          ref={titleRef}
+          className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
+        >
           Experience
         </h2>
         <div className="relative">
@@ -122,9 +164,10 @@ export default function Experience() {
                     {/* Logo at the top of the card */}
                     <div className="flex justify-center mb-4">
                       <img
+                        ref={(el) => (logoRefs.current[index] = el)} // Add reference for each logo
                         src={exp.logo}
                         alt={`${exp.company} logo`}
-                        className="w-auto h-20 object-contain mr-7"  // Adjust logo size here
+                        className="w-auto h-20 object-contain mr-7"
                       />
                     </div>
                     <div className="flex items-center gap-2 text-purple-400 mb-2">
