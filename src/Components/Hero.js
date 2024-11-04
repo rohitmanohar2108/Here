@@ -1,5 +1,5 @@
 import React from "react";
-import { Terminal, ChevronDown, Sparkles } from "lucide-react";
+import { Terminal, ChevronDown } from "lucide-react";
 import Lottie from "react-lottie"; // Make sure you have imported the Lottie component
 import { motion } from "framer-motion"; // For motion animation
 import animationData from "../Animations/animation.json";
