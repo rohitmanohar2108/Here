@@ -39,6 +39,7 @@ export default function Education() {
       {
         height: "100%",
         ease: "power2.out",
+        duration: 2.5,
         scrollTrigger: {
           trigger: lineRef.current,
           start: "top 80%",
@@ -58,6 +59,7 @@ export default function Education() {
           opacity: 1,
           duration: 0.5,
           ease: "back.out(1.7)",
+          duration: 0.8,
           scrollTrigger: {
             trigger: dot,
             start: "top center+=100",
@@ -77,7 +79,7 @@ export default function Education() {
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
+          duration: 1.2,
           ease: "power3.out",
           scrollTrigger: {
             trigger: card,
