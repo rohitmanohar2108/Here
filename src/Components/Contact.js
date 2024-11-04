@@ -7,6 +7,7 @@ import {
   ArrowUpRight,
   Sparkles,
   Stars,
+  Star,
 } from "lucide-react";
 
 const socials = [
@@ -54,16 +55,11 @@ export default function Contact() {
           <div className="absolute -inset-10 pointer-events-none">
             {/* Spinning Arrows */}
 
-            <Sparkles className="absolute right-0 top-0 w-5 h-5 text-yellow-300 animate-sparkle" />
-            <Stars className="absolute left-0 bottom-0 w-5 h-5 text-blue-300 animate-sparkle-delay" />
+            <Sparkles className="absolute right-0 top-0 w-5 h-5 text-yellow-300 animate-sparkle mr-6" />
+            <Stars className="absolute left-0 bottom-0 w-5 h-5 text-blue-300 animate-sparkle-delay ml-6" />
 
             {/* Orbital Circles */}
-            <div className="absolute inset-0 animate-orbit">
-              <div className="absolute -right-4 top-1/2 w-2 h-2 bg-purple-400 rounded-full mt-[40%]" />
-            </div>
-            <div className="absolute inset-0 animate-orbit-reverse">
-              <div className="absolute -left-4 top-1/2 w-2 h-2 bg-pink-400 rounded-full" />
-            </div>
+           
           </div>
         </div>
 

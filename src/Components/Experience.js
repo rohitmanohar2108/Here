@@ -50,7 +50,7 @@ export default function Experience() {
                       <img
                         src={exp.logo}
                         alt={`${exp.company} logo`}
-                        className="w-auto h-20 object-contain mr-12"  // Adjust logo size here
+                        className="w-auto h-20 object-contain mr-7"  // Adjust logo size here
                       />
                     </div>
                     <div className="flex items-center gap-2 text-purple-400 mb-2">
