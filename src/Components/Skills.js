@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Brain, Flame, Database, Code2, Globe, Cpu } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
   {
@@ -41,6 +45,28 @@ const skills = [
 ];
 
 export default function Skills() {
+  const skillRefs = useRef([]);
+
+  useEffect(() => {
+    skillRefs.current.forEach((el, index) => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, scale: 0.8 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.6,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
     <div id="skills" className="py-16 sm:py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -51,7 +77,8 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="group relative touch-highlight"
+              ref={(el) => (skillRefs.current[index] = el)}
+              className="group relative touch-highlight transform transition-transform duration-300 hover:scale-105"
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r opacity-20 blur-sm transition duration-300 group-hover:opacity-100 rounded-xl"
                 style={{
@@ -60,7 +87,7 @@ export default function Skills() {
                   '--tw-gradient-to': skill.color.split(' ')[1]
                 }}
               ></div>
-              <div className="relative p-4 sm:p-6 mobile-glass rounded-xl border border-gray-700 transition-transform duration-300 group-hover:-translate-y-1">
+              <div className="relative p-4 sm:p-6 mobile-glass rounded-xl border border-gray-700">
                 <div className={`text-transparent bg-gradient-to-r ${skill.color} bg-clip-text mb-3 sm:mb-4`}>
                   {skill.icon}
                 </div>

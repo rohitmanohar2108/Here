@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Calendar, Award } from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Adding a logo property for each experience
+gsap.registerPlugin(ScrollTrigger);
+
 const experiences = [
   {
     title: "Media Member",
@@ -15,9 +18,72 @@ const experiences = [
     ],
     logo: "/TEDxNITKSurathkal(white)300ppi.png", // Path to your logo image
   },
+  // Add more experience entries as needed
 ];
 
 export default function Experience() {
+  const lineRef = useRef(null);
+  const dotRefs = useRef([]);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    // Animate the timeline line
+    gsap.fromTo(
+      lineRef.current,
+      { height: "0%" },
+      {
+        height: "100%",
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: lineRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: 1,
+        },
+      }
+    );
+
+    // Animate each dot
+    dotRefs.current.forEach((dot, index) => {
+      gsap.fromTo(
+        dot,
+        { scale: 0, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.5,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: dot,
+            start: "top center+=100",
+            end: "top center",
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+
+    // Animate each card
+    cardRefs.current.forEach((card, index) => {
+      gsap.fromTo(
+        card,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
     <div className="py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
@@ -26,18 +92,25 @@ export default function Experience() {
         </h2>
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute -left-3 md:left-1/2 transform lg:ml-[45%] md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-pink-500" />
-          
+          <div
+            ref={lineRef}
+            className="absolute -left-3 md:left-1/2 transform lg:ml-[45%] md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-pink-500"
+          />
+
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <div
                 key={index}
+                ref={(el) => (cardRefs.current[index] = el)} // Add reference for each card
                 className={`relative flex flex-col md:flex-row gap-8 ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/3 lg:ml-[62.8%] transform -translate-x-5 w-4 h-4 rounded-full bg-purple-500 border-4 border-black" />
+                <div
+                  ref={(el) => (dotRefs.current[index] = el)} // Add reference for each dot
+                  className="absolute left-0 md:left-1/3 lg:ml-[62.8%] transform -translate-x-5 w-4 h-4 rounded-full bg-purple-500 border-4 border-black"
+                />
                 
                 <div
                   className={`flex-1 ${
