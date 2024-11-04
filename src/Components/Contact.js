@@ -36,20 +36,10 @@ export default function Contact() {
     <div id="contact" className="py-20 relative">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div className="relative inline-block group mb-16">
-          {/* Animated Background Effect */}
-          <div className="absolute -inset-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse-slow opacity-75" />
-
-          {/* Floating Elements */}
-
-          {/* Main Title with Gradient Border */}
-          <div className="relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-xy" />
-            <h2 className="relative bg-black px-8 py-4 rounded-lg">
-              <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 animate-pulse-slow">
-                Let's Connect
-              </span>
-            </h2>
-          </div>
+        <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+            Let's Connect
+          </h2>
+          
 
           {/* Animated Icons */}
           <div className="absolute -inset-10 pointer-events-none">
@@ -74,7 +64,7 @@ export default function Contact() {
                 <img
                   src="/rohit.jpg"
                   alt="Rohit Manohar"
-                  className="relative w-52 h-52 rounded-full border-2 border-white/50 group-hover:border-white transition-colors duration-300"
+                  className="relative w-52 h-52 rounded-full border-2 border-pink-500/20 group-hover:border-white transition-colors duration-300"
                 />
               </div>
             </div>

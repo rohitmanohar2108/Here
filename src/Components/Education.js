@@ -8,14 +8,14 @@ const education = [
     degree: "Bachelor of Technology in Computer Science and Engineering",
     period: "2022-2026",
     institution: "National Institute of Technology Karnataka, Surathkal",
-    logo: "nitklogo.png",  // Path to your logo image
+    logo: "nitklogo.png", // Path to your logo image
     achievements: ["Member of TEDx NITK Surathkal"],
   },
   {
     degree: "Secondary Education",
     period: "2020-2022",
     institution: "Dharampeth M.P. Deo Memorial Science College, Nagpur",
-    logo: "https://www.dharampethscience.com/wp-content/uploads/2022/03/dp-logo.png",  // Path to your logo image
+    logo: "https://www.dharampethscience.com/wp-content/uploads/2022/03/dp-logo.png", // Path to your logo image
     achievements: [
       "Participated in SOF International Mathematics 2022 Olympiad and got School Rank-1",
       "Participated in SOF International Science Olympiad 2022 and got School Rank-1",
@@ -31,6 +31,7 @@ export default function Education() {
         <h2 className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
           Education
         </h2>
+
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute -left-3 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 lg:ml-[45%] bg-gradient-to-b from-purple-500 to-pink-500" />
@@ -57,7 +58,7 @@ export default function Education() {
                       <img
                         src={edu.logo}
                         alt={`${edu.institution} logo`}
-                        className="w-24 h-auto object-contain"  // Adjust logo size here
+                        className="w-24 h-auto object-contain" // Adjust logo size here
                       />
                     </div>
                     <div className="flex items-center gap-2 text-purple-400 mb-2">
