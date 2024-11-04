@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, X, Link,  Sparkles, LoaderPinwheel, Code2 } from 'lucide-react';
+import { ExternalLink, Github, X, Link,  Sparkles, Code2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const projects = [

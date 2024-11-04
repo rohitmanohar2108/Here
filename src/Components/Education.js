@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar, Award, Sparkles, Cog, Stars } from "lucide-react";
+import { Calendar, Award, Sparkles, Cog } from "lucide-react";
 import { motion } from "framer-motion";
 
 // Adding a logo property with the path to the logo

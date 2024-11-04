@@ -4,12 +4,7 @@ import {
   Linkedin,
   Mail,
   ExternalLink,
-  Sparkles,
-  Stars,
-  ChevronsLeftRightEllipsis,
-  AudioLines,
   Send,
-  Cable,
   Rocket,
 } from "lucide-react";
 
