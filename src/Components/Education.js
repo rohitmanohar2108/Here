@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar, Award, Sparkles, Cog } from "lucide-react";
+import { Calendar, Award, Sparkles, Cog, Stars } from "lucide-react";
 import { motion } from "framer-motion";
 
 // Adding a logo property with the path to the logo
@@ -31,6 +31,7 @@ export default function Education() {
         <h2 className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
           Education
         </h2>
+        
 
         <div className="relative">
           {/* Timeline line */}

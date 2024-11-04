@@ -6,6 +6,11 @@ import {
   ExternalLink,
   Sparkles,
   Stars,
+  ChevronsLeftRightEllipsis,
+  AudioLines,
+  Send,
+  Cable,
+  Rocket,
 } from "lucide-react";
 
 const socials = [
@@ -42,8 +47,8 @@ export default function Contact() {
           <div className="absolute -inset-10 pointer-events-none">
             {/* Spinning Arrows */}
 
-            <Sparkles className="absolute right-0 top-0 w-5 h-5 text-yellow-300 animate-sparkle mr-6" />
-            <Stars className="absolute left-0 bottom-0 w-5 h-5 text-blue-300 animate-sparkle-delay ml-6" />
+            <Send className="absolute right-0 top-0 w-6 h-6 text-yellow-300 animate-sparkle mr-6" />
+            <Rocket className="absolute left-0 bottom-0 w-6 h-6 text-blue-300 animate-sparkle-delay ml-6" />
 
             {/* Orbital Circles */}
           </div>

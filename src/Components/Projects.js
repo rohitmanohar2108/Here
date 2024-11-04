@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, X, Link,  Sparkles, LoaderPinwheel } from 'lucide-react';
+import { ExternalLink, Github, X, Link,  Sparkles, LoaderPinwheel, Code2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const projects = [
@@ -137,9 +137,9 @@ export default function Projects() {
                animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
              >
-               <Sparkles className="w-7 h-7  text-white/20" />
+               <Sparkles className="w-7 h-7  text-purple-500/50" />
              </motion.div>
-             <LoaderPinwheel className="w-7 h-7 text-purple-600" />
+             <Code2 className="w-7 h-7 text-purple-600" />
            </motion.div>
                
             ))}
