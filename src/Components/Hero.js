@@ -82,7 +82,7 @@ export default function Hero() {
                   onClick={scrollToContact}
                   className="px-6 py-2 rounded-full  bg-pink-500/20 text-pink-300 border border-pink-500/30 hover:bg-pink-500/30 transition-colors touch-highlight"
                 >
-                  Contact Me
+                  Let's Connect
                 </button>
               </div>
             </div>
