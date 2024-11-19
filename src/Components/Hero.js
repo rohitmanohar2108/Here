@@ -85,7 +85,7 @@ export default function Hero() {
                 </h1>
               </motion.div>
               <p className="text-lg sm:text-xl text-gray-300 mb-6">
-                Computer Science undergrad @ NITK
+                Computer Science undergrad <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 transition-all duration-200">@ NITK</span>
               </p>
               <div className="flex justify-center gap-4">
                 <motion.button
