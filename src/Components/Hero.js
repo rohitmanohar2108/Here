@@ -9,7 +9,6 @@ export default function Hero() {
   const roles = [
     "Rohit Manohar",
     "Web Developer",
-    "Software Engineer",
     "UI/UX Designer",
     "Frontend Dev"
   ];
