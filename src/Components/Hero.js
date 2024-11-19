@@ -2,7 +2,7 @@ import React from "react";
 import { ChevronDown, Sparkles, Code2 } from "lucide-react";
 import Lottie from "react-lottie";
 import { motion } from "framer-motion";
-import { useTypewriter } from "../hooks/useTypewriter"
+import { useTypewriter } from "../hooks/useTypewriter";
 import animationData from "../Animations/animation.json";
 
 export default function Hero() {
@@ -10,7 +10,7 @@ export default function Hero() {
     "Rohit Manohar",
     "Web Developer",
     "UI/UX Designer",
-    "Frontend Dev"
+    "Frontend Dev",
   ];
 
   const displayText = useTypewriter(roles, 100, 50, 2000);
@@ -56,12 +56,20 @@ export default function Hero() {
                     key={i}
                     className="relative"
                     animate={{ rotate: [0, 360] }}
-                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
                   >
                     <motion.div
                       className="absolute inset-0"
                       animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
-                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
                     >
                       <Sparkles className="w-7 h-7 text-purple-500/50" />
                     </motion.div>
@@ -85,7 +93,10 @@ export default function Hero() {
                 </h1>
               </motion.div>
               <p className="text-lg sm:text-xl text-gray-300 mb-6">
-                Computer Science undergrad <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 transition-all duration-200">@ NITK</span>
+                Computer Science undergrad{" "}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 transition-all duration-200">
+                  @ NITK
+                </span>
               </p>
               <div className="flex justify-center gap-4">
                 <motion.button
@@ -111,13 +122,13 @@ export default function Hero() {
 
         <button
           onClick={scrollToSkills}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-purple-400 hover:text-purple-300 transition-colors touch-highlight z-20"
+          className="absolute bottom left-1/2 -translate-x-1/2 text-purple-400 hover:text-purple-300 transition-colors touch-highlight z-20"
           aria-label="Scroll to skills"
         >
           <ChevronDown className="w-8 h-8 animate-bounce" />
         </button>
-        
-        <motion.div 
+
+        <motion.div
           className="w-full flex justify-center"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
