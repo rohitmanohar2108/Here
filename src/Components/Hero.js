@@ -1,5 +1,5 @@
 import React from "react";
-import { Terminal, ChevronDown } from "lucide-react";
+import {  ChevronDown, Sparkles, Code2 } from "lucide-react";
 import Lottie from "react-lottie"; // Make sure you have imported the Lottie component
 import { motion } from "framer-motion"; // For motion animation
 import animationData from "../Animations/animation.json";
@@ -37,7 +37,31 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-glow"></div>
             <div className="relative mobile-glass rounded-lg p-6 sm:p-8">
-              <Terminal className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-6 text-purple-400" />
+            <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
+            className="flex justify-center gap-4 mb-4"
+          >
+            {[...Array(3)].map((_, i) => (
+             <motion.div
+             className="relative"
+             animate={{ rotate: [0, 360] }}
+             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+           >
+             <motion.div
+               className="absolute inset-0"
+               animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+             >
+               <Sparkles className="w-7 h-7  text-purple-500/50" />
+             </motion.div>
+             <Code2 className="w-7 h-7 text-purple-600" />
+           </motion.div>
+               
+            ))}
+          </motion.div>
+             
               <div className="inline-flex mb-4 px-4 py-1 bg-purple-500/20 rounded-full text-purple-300 text-sm touch-highlight">
                 Hello World, I'm
               </div>
