@@ -70,6 +70,7 @@ export default function Skills() {
   return (
     <div id="skills" className="py-16 sm:py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="section-divider mb-12"></div>
         <h2 className="text-3xl sm:text-4xl font-bold mb-12 sm:mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
           Technical Arsenal
         </h2>

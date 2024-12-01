@@ -55,7 +55,9 @@ export default function Projects() {
   return (
     <div id="projects" className="py-20 bg-black/30">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+      <div className="section-divider mb-12"></div>
+      
+        <h2 className=" relative z-20 text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
           Featured Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

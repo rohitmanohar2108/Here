@@ -89,7 +89,7 @@ export default function Hero() {
               >
                 <h1 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 transition-all duration-200">
                   {displayText}
-                  <span className="inline-block w-[3px] h-[0.9em] ml-1 align-middle bg-purple-400 animate-blink" />
+                  <span className="inline-block w-[3px] h-[0.9em] animate-blink ml-1 align-middle bg-purple-400 " />
                 </h1>
               </motion.div>
               <p className="text-lg sm:text-xl text-gray-300 mb-6">
@@ -98,6 +98,7 @@ export default function Hero() {
                   @ NITK
                 </span>
               </p>
+              <div className="section-divider mb-12"></div>
               <div className="flex justify-center gap-4">
                 <motion.button
                   whileHover={{ scale: 1.05 }}

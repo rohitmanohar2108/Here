@@ -346,3 +346,30 @@ html {
   background-size: 24px 24px;
   background-color: #000;
 }
+
+
+
+
+
+.section-divider {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #8B4513, transparent);
+  margin: 2rem 0;
+  position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #FFD700;
+  border: 2px solid #8B4513;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.section-divider::before { left: calc(50% - 100px); }
+.section-divider::after { right: calc(50% - 100px); }

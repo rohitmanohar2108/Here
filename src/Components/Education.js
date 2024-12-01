@@ -135,6 +135,7 @@ export default function Education() {
   return (
     <div className="py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
+      <div className="section-divider mb-12"></div>
         <h2
           ref={(el) => contentRefs.current.push(el)}
           className="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"

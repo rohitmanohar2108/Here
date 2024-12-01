@@ -4,8 +4,7 @@ import {
   Linkedin,
   Mail,
   ExternalLink,
-  Send,
-  Rocket,
+  
 } from "lucide-react";
 
 const socials = [
@@ -34,19 +33,13 @@ export default function Contact() {
     <div id="contact" className="py-20 relative">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div className="relative inline-block group mb-16">
+        <div className="section-divider mb-12"></div>
           <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
             Let's Connect
           </h2>
 
           {/* Animated Icons */}
-          <div className="absolute -inset-10 pointer-events-none">
-            {/* Spinning Arrows */}
-
-            <Send className="absolute right-0 top-0 w-6 h-6 text-yellow-300 animate-sparkle mr-6" />
-            <Rocket className="absolute left-0 bottom-0 w-6 h-6 text-blue-300 animate-sparkle-delay ml-6" />
-
-            {/* Orbital Circles */}
-          </div>
+         
         </div>
 
         {/* Bordered Container with Animated Border */}
@@ -60,7 +53,7 @@ export default function Contact() {
                 <img
                   src="/rohit.jpg"
                   alt="Rohit Manohar"
-                  className="relative w-52 h-52 rounded-full border-2 border-pink-500/20 group-hover:border-white transition-colors duration-300"
+                  className="relative w-52 h-52 rounded-full border-2 border-white transition-colors duration-300"
                 />
               </div>
             </div>
